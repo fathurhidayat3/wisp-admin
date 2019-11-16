@@ -24,6 +24,31 @@ const Sidebar = () => {
           <ListGroupItem active>Sensor</ListGroupItem>
           <ListGroupItem>User Log</ListGroupItem>
           <ListGroupItem>User</ListGroupItem>
+
+          <ListGroupItem>Lorem</ListGroupItem>
+          <ListGroupItem>Ipsum</ListGroupItem>
+          <ListGroupItem>Dolor</ListGroupItem>
+          <ListGroupItem>Sit</ListGroupItem>
+          <ListGroupItem>Amet</ListGroupItem>
+          <ListGroupItem>Consectetur</ListGroupItem>
+          <ListGroupItem>Adipiscing</ListGroupItem>
+          <ListGroupItem>Elit</ListGroupItem>
+          <ListGroupItem>Lorem</ListGroupItem>
+          <ListGroupItem>Ipsum</ListGroupItem>
+          <ListGroupItem>Dolor</ListGroupItem>
+          <ListGroupItem>Sit</ListGroupItem>
+          <ListGroupItem>Amet</ListGroupItem>
+          <ListGroupItem>Consectetur</ListGroupItem>
+          <ListGroupItem>Adipiscing</ListGroupItem>
+          <ListGroupItem>Elit</ListGroupItem>
+          <ListGroupItem>Lorem</ListGroupItem>
+          <ListGroupItem>Ipsum</ListGroupItem>
+          <ListGroupItem>Dolor</ListGroupItem>
+          <ListGroupItem>Sit</ListGroupItem>
+          <ListGroupItem>Amet</ListGroupItem>
+          <ListGroupItem>Consectetur</ListGroupItem>
+          <ListGroupItem>Adipiscing</ListGroupItem>
+          <ListGroupItem>Elit</ListGroupItem>
         </ListGroup>
       </SidebarContainer>
       <SidebarTool>

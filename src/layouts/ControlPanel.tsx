@@ -33,20 +33,20 @@ const ControlPanel = (props: ControlPanelProps) => {
   };
 
   const mapPir = [
-    { pirState: pir1, dataRef: "PIR1", text: "PIR 1" },
-    { pirState: pir2, dataRef: "PIR2", text: "PIR 2" },
-    { pirState: pir3, dataRef: "PIR3", text: "PIR 3" },
-    { pirState: pir4, dataRef: "PIR4", text: "PIR 4" }
+    { pirState: pir1, dataRef: "PIR1", text: "Lamp 1" },
+    { pirState: pir2, dataRef: "PIR2", text: "Lamp 2" },
+    { pirState: pir3, dataRef: "PIR3", text: "Lamp 3" },
+    { pirState: pir4, dataRef: "PIR4", text: "Lamp 4" }
   ];
 
   const mapRelay = [
-    { relayState: relay1, dataRef: "R1", text: "Relay 1" },
-    { relayState: relay2, dataRef: "R2", text: "Relay 2" },
-    { relayState: relay3, dataRef: "R3", text: "Relay 3" },
-    { relayState: relay4, dataRef: "R4", text: "Relay 4" },
-    { relayState: relay5, dataRef: "R5", text: "Relay 5" },
-    { relayState: relay6, dataRef: "R6", text: "Relay 6" },
-    { relayState: relay7, dataRef: "R7", text: "Relay 7" }
+    { relayState: relay1, dataRef: "R1", text: "Control 1" },
+    { relayState: relay2, dataRef: "R2", text: "Control 2" },
+    { relayState: relay3, dataRef: "R3", text: "Control 3" },
+    { relayState: relay4, dataRef: "R4", text: "Control 4" },
+    { relayState: relay5, dataRef: "R5", text: "Control 5" },
+    { relayState: relay6, dataRef: "R6", text: "Control 6" },
+    { relayState: relay7, dataRef: "R7", text: "Control 7" }
   ];
 
   return (
@@ -61,7 +61,7 @@ const ControlPanel = (props: ControlPanelProps) => {
             flexDirection="column"
             flexAlignItems={!isDesktopOrLaptop && "center"}
           >
-            <Text as="h3">Indikator PIR</Text>
+            <Text as="h3">Indicator</Text>
 
             <View
               flexWrap="wrap"
@@ -93,7 +93,7 @@ const ControlPanel = (props: ControlPanelProps) => {
             flexDirection="column"
             flexAlignItems={!isDesktopOrLaptop && "center"}
           >
-            <Text as="h3">Kontrol Relay</Text>
+            <Text as="h3">Control</Text>
 
             <View
               flexWrap="wrap"

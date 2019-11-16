@@ -31,6 +31,25 @@ const App = () => {
                 <ControlPanel firebase={firebase} />
                 <Spacer />
                 <Graphs firebase={firebase} />
+
+                <Spacer />
+                <Graphs firebase={firebase} />
+                <Spacer />
+                <Graphs firebase={firebase} />
+                <Spacer />
+                <Graphs firebase={firebase} />
+                <Spacer />
+                <Graphs firebase={firebase} />
+                <Spacer />
+                <Graphs firebase={firebase} />
+                <Spacer />
+                <Graphs firebase={firebase} />
+                <Spacer />
+                <Graphs firebase={firebase} />
+                <Spacer />
+                <Graphs firebase={firebase} />
+                <Spacer />
+                <Graphs firebase={firebase} />
               </MainContentWrapper>
             </MainContent>
           </MainWrapper>

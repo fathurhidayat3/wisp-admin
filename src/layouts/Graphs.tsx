@@ -29,7 +29,7 @@ const Graphs = (props: GraphsProps) => {
           flexDirection="column"
           flexAlignItems={!isDesktopOrLaptop && "center"}
         >
-          <Text as="h3">Grafik Realtime</Text>
+          <Text as="h3">Realtime Graph</Text>
           <Card>
             <View
               flex={1}
