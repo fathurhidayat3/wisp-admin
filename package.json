@@ -6,10 +6,10 @@
   "dependencies": {
     "autoscroll-react": "^3.2.0",
     "chart.js": "^2.9.2",
+    "dayjs": "^1.8.17",
     "express": "^4.15.2",
     "firebase": "^7.3.0",
     "gh-pages": "^2.1.1",
-    "moment": "^2.24.0",
     "react": "^16.11.0",
     "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.11.0",
@@ -28,7 +28,8 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "storybook": "start-storybook -p 9001"
+    "storybook": "start-storybook -p 9001",
+    "tsc:w": "tsc -w"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,6 +49,14 @@
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@storybook/react": "^5.2.6",
-    "babel-loader": "^8.0.6"
+    "@types/chart.js": "^2.9.0",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.8",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-responsive": "^8.0.2",
+    "@types/styled-components": "^4.4.0",
+    "babel-loader": "^8.0.6",
+    "typescript": "^3.7.2"
   }
 }

@@ -1,4 +1,4 @@
-import moment from "moment";
+import dayjs from "dayjs";
 
 const graphInitialData = {
   labels: [],
@@ -56,12 +56,12 @@ const graphOptions = {
   }
 };
 
-const getGraphData = (data, oldObj) => {
+const getGraphData = (data: any, oldObj: any) => {
   let { labels, datasets } = oldObj;
   let chartDatasets = datasets[0];
   let { data: chartLoggerData } = chartDatasets;
 
-  let currentTime = moment(new Date().getTime()).format("HH:mm:ss");
+  let currentTime = dayjs(new Date().getTime()).format("HH:mm:ss");
 
   const newLabels = [...labels, currentTime];
   const newData = [...chartLoggerData, data];

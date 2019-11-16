@@ -1,7 +1,10 @@
-import React from "react";
 import { useMediaQuery } from "react-responsive";
 
-const RenderHandler = props => {
+type RenderHandlerProps = {
+  children: (isDesktopOrLaptop: boolean) => any;
+};
+
+const RenderHandler = (props: RenderHandlerProps) => {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-device-width: 1224px)"
   });

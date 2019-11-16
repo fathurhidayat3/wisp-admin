@@ -59,12 +59,17 @@ const MainWrapper = styled.div`
   border: 4px solid ${colors.navy};
 `;
 
+type MainContentProps = {
+  isDesktopOrLaptop: boolean;
+};
+
 const MainContent = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 
-  margin-top: ${props => (props.isDesktopOrLaptop ? `56px` : `81px`)};
+  margin-top: ${(props: MainContentProps) =>
+    props.isDesktopOrLaptop ? `56px` : `81px`};
 `;
 
 const MainContentWrapper = styled.div`
@@ -72,7 +77,7 @@ const MainContentWrapper = styled.div`
 
   padding: 16px;
 
-  height: ${props =>
+  height: ${(props: MainContentProps) =>
     props.isDesktopOrLaptop ? `calc(100vh - 96px);` : `calc(100vh - 120px);`};
 
   overflow: auto;

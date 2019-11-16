@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { useObject } from "react-firebase-hooks/database";
 
 import RenderHandler from "../components/RenderHandler";
@@ -6,7 +6,11 @@ import View from "../components/View";
 import Text from "../components/Text";
 import Button from "../components/Button";
 
-const ControlPanel = props => {
+type ControlPanelProps = {
+  firebase: any;
+};
+
+const ControlPanel = (props: ControlPanelProps) => {
   const [pir1] = useObject(props.firebase.database().ref("PIR1"));
   const [pir2] = useObject(props.firebase.database().ref("PIR2"));
   const [pir3] = useObject(props.firebase.database().ref("PIR3"));
@@ -19,7 +23,7 @@ const ControlPanel = props => {
   const [relay6] = useObject(props.firebase.database().ref("R6"));
   const [relay7] = useObject(props.firebase.database().ref("R7"));
 
-  const clickRelay = (ref, relayState) => {
+  const clickRelay = (ref: string, relayState: any) => {
     let relayRef = props.firebase.database().ref(ref);
 
     const currentRelay =
@@ -49,7 +53,7 @@ const ControlPanel = props => {
     <RenderHandler>
       {isDesktopOrLaptop => (
         <View
-          flexDirection={!isDesktopOrLaptop && "column"}
+          flexDirection={!isDesktopOrLaptop ? "column" : "row"}
           flexAlignItems={!isDesktopOrLaptop && "center"}
         >
           <View
@@ -106,6 +110,7 @@ const ControlPanel = props => {
                         ? "green"
                         : "red"
                     }
+                    size="medium"
                     onClick={() =>
                       clickRelay(relayItem.dataRef, relayItem.relayState)
                     }

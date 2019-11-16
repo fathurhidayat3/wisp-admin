@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 import { ChevronRight, ChevronLeft } from "react-feather";
 
@@ -39,6 +39,10 @@ const Sidebar = () => {
   );
 };
 
+type SidebarWrapperProps = {
+  show: boolean;
+};
+
 const SidebarWrapper = styled.div`
   position: relative;
 
@@ -48,7 +52,7 @@ const SidebarWrapper = styled.div`
 
   margin-top: 61px;
 
-  width: ${props => (props.show ? "250px" : "40px")};
+  width: ${(props: SidebarWrapperProps) => (props.show ? "250px" : "40px")};
 
   background-color: ${colors.gray};
 `;
@@ -60,7 +64,8 @@ const SidebarContainer = styled.div`
 
   overflow: auto;
 
-  visibility: ${props => (props.show ? "visible" : "hidden")};
+  visibility: ${(props: SidebarWrapperProps) =>
+    props.show ? "visible" : "hidden"};
 `;
 
 const SidebarTool = styled.div`

@@ -1,11 +1,13 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 import RenderHandler from "../components/RenderHandler";
 import Text from "../components/Text";
 import colors from "../constants/colors";
 
-const Navbar = props => {
+type NavbarProps = { firebase: any };
+
+const Navbar = (props: NavbarProps) => {
   return (
     <RenderHandler>
       {isDesktopOrLaptop => (
@@ -13,7 +15,7 @@ const Navbar = props => {
           <Text
             color={colors.navy}
             as={!isDesktopOrLaptop ? "h4" : "h3"}
-            align={!isDesktopOrLaptop && "center"}
+            align={!isDesktopOrLaptop ? "center" : undefined}
             withoutSpacing
           >
             Wisp Admin
@@ -22,6 +24,10 @@ const Navbar = props => {
       )}
     </RenderHandler>
   );
+};
+
+type TopNavbarProps = {
+  isDesktopOrLaptop: boolean;
 };
 
 const TopNavbar = styled.div`
@@ -33,7 +39,8 @@ const TopNavbar = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: ${props => (props.isDesktopOrLaptop ? `8px 20px;` : `16px 20px;`)};
+  padding: ${(props: TopNavbarProps) =>
+    props.isDesktopOrLaptop ? `8px 20px;` : `16px 20px;`};
 
   min-height: ${props => (props.isDesktopOrLaptop ? `50px;` : `60px;`)};
   width: calc(100vw - 40px);

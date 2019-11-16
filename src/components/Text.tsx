@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const marginMatcher = as => {
+const marginMatcher = (as?: string) => {
   switch (as) {
     case "h1":
       return "12px 0";
@@ -21,8 +21,15 @@ const marginMatcher = as => {
   }
 };
 
+type TextProps = {
+  as?: string;
+  withoutSpacing?: boolean;
+  align?: "left" | "center" | "right" | "justify";
+  children: any;
+};
+
 const Text = styled.span`
-  margin: ${props => (props.as ? marginMatcher(props.as) : "0")};
+  margin: ${(props: TextProps) => (props.as ? marginMatcher(props.as) : "0")};
 
   font-family: "Ubuntu";
   color: ${props => (props.color ? props.color : "black")};

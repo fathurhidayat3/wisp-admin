@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 import View from "./View";
@@ -6,11 +6,20 @@ import Spacer from "./Spacer";
 import Text from "./Text";
 import colors from "../constants/colors";
 
-const UserInfo = props => {
+type UserInfoProps = {
+  profile: {
+    avatar: string;
+    username: string;
+  };
+};
+
+const UserInfo = (props: UserInfoProps) => {
+  const { profile } = props;
+
   return (
-    <>
+    <React.Fragment>
       <UserInfoWrapper>
-        <Avatar src={props.profile.avatar} />
+        <Avatar src={profile && profile.avatar} />
         <UserInfoContent>
           <Text as="small">Hello, </Text>
           <Text as="h4" style={{ marginTop: 2 }}>
@@ -22,7 +31,7 @@ const UserInfo = props => {
       <View style={{ margin: "8px 0", padding: "0 16px" }}>
         <Spacer backgroundColor={colors.navy} style={{ margin: 0 }} />
       </View>
-    </>
+    </React.Fragment>
   );
 };
 

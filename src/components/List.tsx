@@ -7,6 +7,10 @@ const ListGroup = styled.ul`
   padding: 0;
 `;
 
+type ListGroupItem = {
+  active?: boolean;
+};
+
 const ListGroupItem = styled.li`
   list-style: none;
   position: relative;
@@ -17,7 +21,7 @@ const ListGroupItem = styled.li`
   font-size: 0.9rem;
   color: ${colors.black};
 
-  ${props =>
+  ${(props: ListGroupItem) =>
     props.active
       ? `
       background-color: ${colors.darkGray}

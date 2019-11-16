@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { useObject } from "react-firebase-hooks/database";
 
 import RenderHandler from "../components/RenderHandler";
@@ -7,7 +7,11 @@ import LineGraph from "../components/LineGraph";
 import Card from "../components/Card";
 import Text from "../components/Text";
 
-const Graphs = props => {
+type GraphsProps = {
+  firebase: any;
+};
+
+const Graphs = (props: GraphsProps) => {
   const [voltage] = useObject(props.firebase.database().ref("aVolt"));
   const [amphere] = useObject(props.firebase.database().ref("aAmp"));
   const [power, setPower] = React.useState();
@@ -29,7 +33,7 @@ const Graphs = props => {
           <Card>
             <View
               flex={1}
-              flexDirection={!isDesktopOrLaptop && "column"}
+              flexDirection={!isDesktopOrLaptop ? "column" : "row"}
               flexAlignItems="center"
             >
               <LineGraph

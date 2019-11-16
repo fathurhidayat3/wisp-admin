@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 import colors from "../constants/colors";
 
-const sizeMatcher = (size = "medium") => {
+type SizeType = "small" | "medium" | "large";
+
+const sizeMatcher = (size?: SizeType) => {
   switch (size) {
     case "small":
       return `padding: 4px 8px;`;
@@ -14,7 +16,7 @@ const sizeMatcher = (size = "medium") => {
   }
 };
 
-const variantMatcher = variant => {
+const variantMatcher = (variant: string) => {
   switch (variant) {
     case "blue":
       return colors.blue;
@@ -38,7 +40,7 @@ const variantMatcher = variant => {
   }
 };
 
-const colorMatcher = (variant, ghost = false) => {
+const colorMatcher = (variant: string, ghost: boolean = false) => {
   if (ghost) {
     switch (variant) {
       case "blue":
@@ -79,7 +81,7 @@ const colorMatcher = (variant, ghost = false) => {
   }
 };
 
-const borderMatcher = variant => {
+const borderMatcher = (variant: string) => {
   switch (variant) {
     case "blue":
       return `1.2px solid ${colors.blue}`;
@@ -103,28 +105,38 @@ const borderMatcher = variant => {
   }
 };
 
+type ButtonProps = {
+  variant?: string;
+  ghost?: boolean;
+  rounded?: boolean;
+  size?: SizeType;
+  block?: boolean;
+};
+
 const Button = styled.button`
   margin: 4px;
 
-  background-color: ${props =>
-    props.ghost ? "transparent" : variantMatcher(props.variant)};
+  background-color: ${(props: ButtonProps) =>
+    props.ghost
+      ? "transparent"
+      : props.variant && variantMatcher(props.variant)};
   border-radius: ${props => (props.rounded ? `20px` : `3px`)};
-  border: ${props => borderMatcher(props.variant)};
+  border: ${props => props.variant && borderMatcher(props.variant)};
 
   font-size: 12px;
-  color: ${props => colorMatcher(props.variant, props.ghost)};
+  color: ${props => props.variant && colorMatcher(props.variant, props.ghost)};
 
   outline: none;
   cursor: pointer;
 
-  ${props => sizeMatcher(props.size)};
+  ${props => props.size && sizeMatcher(props.size)};
   ${props => (props.block ? `width: 100%;` : undefined)}
 
   &:active {
     background: ${props =>
       props.disabled || props.ghost
         ? undefined
-        : variantMatcher(props.variant)};
+        : props.variant && variantMatcher(props.variant)};
     opacity: 0.5;
   }
 
@@ -135,5 +147,9 @@ const Button = styled.button`
     color: #e6e6e4;
   }
 `;
+
+Button.defaultProps = {
+  size: "medium"
+};
 
 export default Button;
