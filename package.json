@@ -2,7 +2,7 @@
   "name": "power-monitoring",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fathurhidayat3.github.io/power-monitoring",
+  "homepage": "https://fathurhidayat3.github.io/wisp-admin",
   "dependencies": {
     "autoscroll-react": "^3.2.0",
     "chart.js": "^2.9.2",
