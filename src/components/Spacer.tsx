@@ -13,7 +13,7 @@ const Spacer = styled.div`
   width: 100%;
 
   background-color: ${(props: SpacerProps) =>
-    props.backgroundColor ? props.backgroundColor : colors.navy};
+    props.backgroundColor ? props.backgroundColor : colors.darkGray};
 `;
 
 export default Spacer;
