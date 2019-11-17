@@ -2,8 +2,8 @@ import * as React from "react";
 import styled from "styled-components";
 import { ChevronRight, ChevronLeft } from "react-feather";
 
-import { ListGroup, ListGroupItem } from "../components/List";
-import UserInfo from "../components/UserInfo";
+import { ListGroup, ListGroupItem } from "../components/Lists/List";
+import UserInfo from "../components/Misc/UserInfo";
 import colors from "../constants/colors";
 
 const Sidebar = () => {

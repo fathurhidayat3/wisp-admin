@@ -2,8 +2,8 @@ import * as React from "react";
 import styled from "styled-components";
 
 import PlainCard from "./PlainCard";
-import View from "../View";
-import Text from "../Text";
+import View from "../Layouts/View";
+import Text from "../Typography/Text";
 
 type SimpleCardProps = {
   title: string;

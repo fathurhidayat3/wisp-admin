@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import View from "../View";
+import View from "../Layouts/View";
 import colors from "../../constants/colors";
 
 const PlainCard = styled(View)`

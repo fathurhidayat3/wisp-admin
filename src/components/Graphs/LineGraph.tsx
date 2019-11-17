@@ -5,7 +5,7 @@ import {
   graphInitialData,
   graphOptions,
   getGraphData
-} from "../utils/chartUtils";
+} from "../../utils/chartUtils";
 
 type LineGraphProps = {
   streamData: string | number;

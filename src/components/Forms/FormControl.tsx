@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FlexDirectionType } from "./View";
+import { FlexDirectionType } from "../Layouts/View";
 
 type FormControlProps = {
   direction?: FlexDirectionType;

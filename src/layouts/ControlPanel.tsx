@@ -3,8 +3,8 @@ import { useObject } from "react-firebase-hooks/database";
 
 import RenderHandler from "../components/RenderHandler";
 import SimpleCard from "../components/Cards/SimpleCard";
-import View from "../components/View";
-import Button from "../components/Button";
+import View from "../components/Layouts/View";
+import Button from "../components/Buttons/Button";
 
 type ControlPanelProps = {
   firebase: any;

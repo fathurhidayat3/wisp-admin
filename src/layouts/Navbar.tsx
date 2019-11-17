@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 import RenderHandler from "../components/RenderHandler";
-import Text from "../components/Text";
+import Text from "../components/Typography/Text";
 import colors from "../constants/colors";
 
 type NavbarProps = { firebase: any };

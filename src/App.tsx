@@ -7,7 +7,7 @@ import Sidebar from "./layouts/Sidebar";
 import ControlPanel from "./layouts/ControlPanel";
 import Graphs from "./layouts/Graphs";
 import RenderHandler from "./components/RenderHandler";
-import Spacer from "./components/Spacer";
+import Spacer from "./components/Misc/Spacer";
 import colors from "./constants/colors";
 
 const firebaseConfig = {

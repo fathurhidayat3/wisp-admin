@@ -2,7 +2,7 @@ import React from "react";
 
 import Button from "../components/Button";
 import View from "../components/View";
-import Text from "../components/Text";
+import Text from "../components/Typography/Text";
 import Spacer from "../components/Spacer";
 
 const ButtonStories = () => {

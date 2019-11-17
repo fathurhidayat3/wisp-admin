@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import colors from "../constants/colors";
+import colors from "../../constants/colors";
 
 const ListGroup = styled.ul`
   margin: 0;

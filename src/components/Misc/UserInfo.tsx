@@ -1,10 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import View from "./View";
 import Spacer from "./Spacer";
-import Text from "./Text";
-import colors from "../constants/colors";
+import View from "../Layouts/View";
+import Text from "../Typography/Text";
 
 type UserInfoProps = {
   profile: {

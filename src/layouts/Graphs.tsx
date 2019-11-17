@@ -3,8 +3,8 @@ import { useObject } from "react-firebase-hooks/database";
 
 import RenderHandler from "../components/RenderHandler";
 import SimpleCard from "../components/Cards/SimpleCard";
-import LineGraph from "../components/LineGraph";
-import View from "../components/View";
+import LineGraph from "../components/Graphs/LineGraph";
+import View from "../components/Layouts/View";
 
 type GraphsProps = {
   firebase: any;
