@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
-import colors from "../constants/colors";
+import View from "../View";
+import colors from "../../constants/colors";
 
-const Card = styled.div`
-  display: flex;
-
-  margin: 8px 0;
+const PlainCard = styled(View)`
+  margin: 8px;
   padding: 16px 8px;
 
   width: 100%;
@@ -20,4 +19,4 @@ const Card = styled.div`
   -moz-box-shadow: 0px 0px 10px 2px rgba(41, 63, 76, 0.05);
 `;
 
-export default Card;
+export default PlainCard;
