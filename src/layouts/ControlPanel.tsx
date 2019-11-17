@@ -2,8 +2,8 @@ import * as React from "react";
 import { useObject } from "react-firebase-hooks/database";
 
 import RenderHandler from "../components/RenderHandler";
+import SimpleCard from "../components/Cards/SimpleCard";
 import View from "../components/View";
-import Text from "../components/Text";
 import Button from "../components/Button";
 
 type ControlPanelProps = {
@@ -53,20 +53,16 @@ const ControlPanel = (props: ControlPanelProps) => {
     <RenderHandler>
       {isDesktopOrLaptop => (
         <View
+          flex={1}
           flexDirection={!isDesktopOrLaptop ? "column" : "row"}
           flexAlignItems={!isDesktopOrLaptop && "center"}
+          style={{ margin: "0 -4px" }}
         >
-          <View
-            flex={0.55}
-            flexDirection="column"
-            flexAlignItems={!isDesktopOrLaptop && "center"}
-          >
-            <Text as="h3">Indicator</Text>
-
+          <SimpleCard title="Indicator">
             <View
               flexWrap="wrap"
               flexJustifyContent={!isDesktopOrLaptop && "center"}
-              style={{ margin: "auto -4px" }}
+              style={{ margin: "0 -4px" }}
             >
               {mapPir.map(pirItem => {
                 return (
@@ -86,19 +82,13 @@ const ControlPanel = (props: ControlPanelProps) => {
                 );
               })}
             </View>
-          </View>
+          </SimpleCard>
 
-          <View
-            flex={1}
-            flexDirection="column"
-            flexAlignItems={!isDesktopOrLaptop && "center"}
-          >
-            <Text as="h3">Control</Text>
-
+          <SimpleCard title="Control">
             <View
               flexWrap="wrap"
               flexJustifyContent={!isDesktopOrLaptop && "center"}
-              style={{ margin: "auto -4px" }}
+              style={{ margin: "0 -4px" }}
             >
               {mapRelay.map(relayItem => {
                 return (
@@ -121,7 +111,7 @@ const ControlPanel = (props: ControlPanelProps) => {
                 );
               })}
             </View>
-          </View>
+          </SimpleCard>
         </View>
       )}
     </RenderHandler>
