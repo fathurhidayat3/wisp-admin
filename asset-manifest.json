@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/wisp-admin/static/css/main.4db05675.chunk.css",
-    "main.js": "/wisp-admin/static/js/main.10c0796c.chunk.js",
-    "main.js.map": "/wisp-admin/static/js/main.10c0796c.chunk.js.map",
+    "main.js": "/wisp-admin/static/js/main.c94f9526.chunk.js",
+    "main.js.map": "/wisp-admin/static/js/main.c94f9526.chunk.js.map",
     "runtime-main.js": "/wisp-admin/static/js/runtime-main.6ecee79a.js",
     "runtime-main.js.map": "/wisp-admin/static/js/runtime-main.6ecee79a.js.map",
     "static/js/2.c7906a9f.chunk.js": "/wisp-admin/static/js/2.c7906a9f.chunk.js",
     "static/js/2.c7906a9f.chunk.js.map": "/wisp-admin/static/js/2.c7906a9f.chunk.js.map",
     "index.html": "/wisp-admin/index.html",
-    "precache-manifest.7f3cc99939b4fe9ab2d691efc7a61c9a.js": "/wisp-admin/precache-manifest.7f3cc99939b4fe9ab2d691efc7a61c9a.js",
+    "precache-manifest.4a5e2febcbebc0c89c0ce1346b02ab9c.js": "/wisp-admin/precache-manifest.4a5e2febcbebc0c89c0ce1346b02ab9c.js",
     "service-worker.js": "/wisp-admin/service-worker.js",
     "static/css/main.4db05675.chunk.css.map": "/wisp-admin/static/css/main.4db05675.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.6ecee79a.js",
     "static/js/2.c7906a9f.chunk.js",
     "static/css/main.4db05675.chunk.css",
-    "static/js/main.10c0796c.chunk.js"
+    "static/js/main.c94f9526.chunk.js"
   ]
 }
