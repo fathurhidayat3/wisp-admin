@@ -29,7 +29,7 @@ const UserInfo = (props: UserInfoProps) => {
       </UserInfoWrapper>
 
       <View style={{ margin: "8px 0", padding: "0 16px" }}>
-        <Spacer backgroundColor={colors.navy} style={{ margin: 0 }} />
+        <Spacer style={{ margin: 0 }} />
       </View>
     </React.Fragment>
   );
